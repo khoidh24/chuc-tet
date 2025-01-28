@@ -6,7 +6,7 @@ const PRIZES = [
     percent: 40,
     result: "Ôi tiếc quá, bạn không trúng thưởng 🥲",
     description:
-      "Không sao cả, năm sau có khi bạn sẽ là người đầu tiên giật giải lớn nhất đó 😍",
+      "Không sao cả, năm tới có khi bạn sẽ là người đầu tiên giật giải lớn nhất đó 😍",
   },
   {
     minDeg: 31,
