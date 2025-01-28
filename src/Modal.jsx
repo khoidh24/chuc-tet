@@ -12,14 +12,14 @@ const Modal = ({ isVisible = false, onClose, prize, description }) => {
           exit={{ opacity: 0 }}
         >
           <motion.div
-            className="bg-[#A70706] rounded-2xl shadow-lg p-6 w-[90%] max-w-md text-center"
+            className="bg-[#A70706] rounded-2xl shadow-lg p-6 w-full max-w-md text-center mx-4"
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             exit={{ scale: 0 }}
             transition={{ duration: 0.3, ease: "easeOut" }}
           >
-            <h2 className="text-2xl font-bold text-[#FEF9C6] mb-8">{prize}</h2>
-            <p className="text-md text-[#FEF9C6] mb-8">
+            <h2 className="text-2xl font-bold text-[#FEF9C6] mb-6">{prize}</h2>
+            <p className="text-ld text-[#FEF9C6] mb-8">
               <span className="font-bold text-[#FEF9C6]">{description}</span>
             </p>
             <button
