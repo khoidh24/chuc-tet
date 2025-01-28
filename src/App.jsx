@@ -43,7 +43,7 @@ const LuckyWheel = () => {
             display: false,
           },
           datalabels: {
-            offset: -10,
+            offset: -20,
             anchor: "center",
             align: "end",
             clamp: true,
@@ -131,7 +131,7 @@ const LuckyWheel = () => {
           <button
             onClick={handleSpin}
             disabled={spinningRef.current}
-            className="bg-[#CD1928] w-[86px] h-[86px] z-20 rounded-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-bold border-2 border-white"
+            className="bg-[#CD1928] outline:none ring-0 focus:outline-none focus:ring-0 w-[86px] h-[86px] z-20 rounded-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-bold border-2 border-white"
           >
             Quay!
           </button>

@@ -6,7 +6,7 @@ const PRIZES = [
     percent: 80,
     result: "Ôi tiếc quá, bạn không trúng thưởng 🥲",
     description:
-      "Không sao cả, năm có khi bạn sẽ là người đầu tiên giật giải lớn nhất đó 😍",
+      "Không sao cả, năm sau có khi bạn sẽ là người đầu tiên giật giải lớn nhất đó 😍",
   },
   {
     minDeg: 31,
@@ -61,6 +61,6 @@ const PRIZES = [
   },
 ];
 
-const prizeLabels = ["10K", "0K", "200K", "100K", "50K", "20K"];
+const prizeLabels = ["10K", "Hụt", "200K", "100K", "50K", "20K"];
 
 export { PRIZES, prizeLabels };
