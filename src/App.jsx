@@ -143,6 +143,9 @@ const LuckyWheel = () => {
         </p>
         <img src="/tet-tree.webp" className="w-full absolute top-[-50px]" />
         <img src="/footer2.gif" className="absolute bottom-12" />
+        <p className="text-xs absolute bottom-2 text-white mx-4 text-center">
+          App này được làm bởi Khôi Dương (khoidh24) ✨
+        </p>
         <Modal
           isVisible={isModalVisible}
           onClose={() => setIsModalVisible(false)}
