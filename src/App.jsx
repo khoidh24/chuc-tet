@@ -131,9 +131,9 @@ const LuckyWheel = () => {
           <button
             onClick={handleSpin}
             disabled={spinningRef.current}
-            className="bg-[#CD1928] outline:none ring-0 focus:outline-none focus:ring-0 w-[86px] h-[86px] z-20 rounded-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-bold border-2 border-white"
+            className="bg-[#CD1928] outline:none ring-0 focus:outline-none focus:ring-0 w-[86px] h-[86px] z-20 rounded-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-bold border-2 border-white text-xl"
           >
-            Quay!
+            QUAY!
           </button>
         </div>
         <p className="text-white mx-4 text-center">
