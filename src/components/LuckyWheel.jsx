@@ -156,6 +156,7 @@ const LuckyWheel = () => {
           Lì xì quay số
         </h1>
         <div className="w-[80%] relative z-50">
+          <div className="w-full h-full rounded-full bg-[radial-gradient(circle,rgba(0,0,0,1)_0%,rgba(0,0,0,0)_20%,rgba(0,0,0,1)_100%)] opacity-50 absolute inset-0" />
           <img
             draggable="false"
             alt="spinning-wheel-ring"
