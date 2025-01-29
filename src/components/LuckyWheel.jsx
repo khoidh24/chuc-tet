@@ -120,6 +120,7 @@ const LuckyWheel = () => {
       }
     };
     console.log("clicked");
+    console.log(prize);
     requestAnimationFrame(rotate);
   };
 

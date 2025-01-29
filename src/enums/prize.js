@@ -1,9 +1,18 @@
+const betterLuckNextTime = Number(
+  import.meta.env.VITE_APP_BETTER_LUCK_NEXT_TIME
+);
+const tenK = Number(import.meta.env.VITE_APP_10K);
+const twentyK = Number(import.meta.env.VITE_APP_20K);
+const fiftyK = Number(import.meta.env.VITE_APP_50K);
+const oneHundredK = Number(import.meta.env.VITE_APP_100K);
+const twoHundredK = Number(import.meta.env.VITE_APP_200K);
+
 const PRIZES = [
   {
     minDeg: 0,
     maxDeg: 30,
     value: 2,
-    percent: import.meta.env.VITE_APP_BETTER_LUCK_NEXT_TIME,
+    percent: betterLuckNextTime,
     result: "Ôi tiếc quá, bạn không trúng thưởng 🥲",
     description:
       "Không sao cả, năm sau có khi bạn sẽ là người đầu tiên giật giải lớn nhất đó 😍",
@@ -12,7 +21,7 @@ const PRIZES = [
     minDeg: 31,
     maxDeg: 90,
     value: 1,
-    percent: import.meta.env.VITE_APP_10K,
+    percent: tenK,
     result: "Waoooo! Bạn đã trúng 10.000vnđ 🎉",
     description:
       "Tuy là quà nhỏ nhất nhưng nó mang ý nghĩa tấm lòng nhiều nhất ❤️",
@@ -21,7 +30,7 @@ const PRIZES = [
     minDeg: 91,
     maxDeg: 150,
     value: 6,
-    percent: import.meta.env.VITE_APP_20K,
+    percent: twentyK,
     result: "Waoooo! Bạn đã trúng 20.000vnđ 🎉",
     description:
       "Có vẻ như hôm nay là ngày may mắn của bạn, chắc hẳn cả năm cũng sẽ may mắn như vậy rồi 😊",
@@ -30,7 +39,7 @@ const PRIZES = [
     minDeg: 151,
     maxDeg: 210,
     value: 5,
-    percent: import.meta.env.VITE_APP_50K,
+    percent: fiftyK,
     result: "Waoooo! Bạn đã trúng 50.000vnđ 🎉",
     description: "Bạn rất chi là may mắn luôn! Cả năm phát tài rồi đó 🤩",
   },
@@ -38,7 +47,7 @@ const PRIZES = [
     minDeg: 211,
     maxDeg: 270,
     value: 4,
-    percent: import.meta.env.VITE_APP_100K,
+    percent: oneHundredK,
     result: "Waoooo! Bạn đã trúng 100.000vnđ 🎉",
     description: "Không thể tin được! Số bạn năm nay chắc hẳn rất tốt 🥰",
   },
@@ -46,7 +55,7 @@ const PRIZES = [
     minDeg: 271,
     maxDeg: 330,
     value: 3,
-    percent: import.meta.env.VITE_APP_200K,
+    percent: twoHundredK,
     result: "Waoooo! Bạn đã trúng 200.000vnđ 🎉",
     description: "Không còn gì để nói! Năm nay chắc chắn là dành cho bạn ✨",
   },
@@ -54,7 +63,7 @@ const PRIZES = [
     minDeg: 331,
     maxDeg: 360,
     value: 2,
-    percent: import.meta.env.VITE_APP_BETTER_LUCK_NEXT_TIME,
+    percent: betterLuckNextTime,
     result: "Ôi tiếc quá, bạn không trúng thưởng 🥲",
     description:
       "Không sao cả, năm sau có khi bạn sẽ là người đầu tiên giật giải lớn nhất đó 😍",
