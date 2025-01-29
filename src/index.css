@@ -3,7 +3,7 @@
 
 
 html {
-  overscroll-behavior: none;
+  @apply overscroll-none overflow-hidden
 }
 
 body {
