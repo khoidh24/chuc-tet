@@ -24,7 +24,7 @@ const Modal = ({ isVisible = false, onClose, prize, description }) => {
             </p>
             <button
               onClick={onClose}
-              className="bg-[#CD1928] text-white px-4 py-2 rounded-lg font-semibold hover:bg-[#A70706] transition"
+              className="bg-[#CD1928] text-white px-4 py-2 rounded-lg font-semibold"
             >
               Đóng
             </button>
