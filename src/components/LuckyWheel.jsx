@@ -119,8 +119,6 @@ const LuckyWheel = () => {
         setIsModalVisible(true);
       }
     };
-    console.log("clicked");
-    console.log(prize);
     requestAnimationFrame(rotate);
   };
 
