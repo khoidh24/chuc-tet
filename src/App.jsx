@@ -12,7 +12,7 @@ const LuckyWheel = () => {
   const canvasRef = useRef();
   const chartRef = useRef(null); // Lưu trữ `myChart` trong ref
   const audioRef = useRef();
-  const spinningRef = useRef(false);
+  const [spinning, setSpinning] = useState(false);
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [prize, setPrize] = useState();
   const [isAudioPlaying, setIsAudioPlaying] = useState(false);
@@ -83,9 +83,9 @@ const LuckyWheel = () => {
   };
 
   const handleSpin = () => {
-    if (spinningRef.current) return;
+    if (spinning) return;
 
-    spinningRef.current = true;
+    setSpinning(true);
     const selectedPrize = weightedRandom();
     const randomDeg = Math.floor(
       Math.random() * (selectedPrize.maxDeg - selectedPrize.minDeg + 1) +
@@ -114,7 +114,7 @@ const LuckyWheel = () => {
         chartRef.current.update();
         setPrize(selectedPrize);
         console.log(selectedPrize);
-        spinningRef.current = false;
+        setSpinning(false);
         setIsModalVisible(true);
       }
     };
@@ -155,16 +155,18 @@ const LuckyWheel = () => {
           <canvas ref={canvasRef}></canvas>
           <button
             onClick={handleSpin}
-            disabled={spinningRef.current}
+            disabled={spinning}
             className="bg-[#CD1928] outline:none ring-0 focus:outline-none focus:ring-0 w-[86px] h-[86px] z-[60] rounded-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-bold border-2 border-white text-xl"
           >
             QUAY!
           </button>
         </div>
         <p className="text-white mx-4 text-center z-10">
-          {spinningRef.current
+          {prize
+            ? prize?.result
+            : spinning
             ? "Để xem chúng ta sẽ trúng gì nào..."
-            : "Ấn vào nút quay chính giữa vòng quay để nhận lì xì nhé!"}
+            : "Ấn vào nút quay để nhận lì xì nhé!"}
         </p>
         <img src="/tet-tree.webp" className="w-full absolute top-[-50px]" />
         <img src="/footer2.gif" className="absolute bottom-12" />
@@ -175,7 +177,10 @@ const LuckyWheel = () => {
 
         <Modal
           isVisible={isModalVisible}
-          onClose={() => setIsModalVisible(false)}
+          onClose={() => {
+            setIsModalVisible(false);
+            setPrize(null);
+          }}
           prize={prize?.result}
           description={prize?.description}
         />
