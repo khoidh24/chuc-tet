@@ -142,9 +142,9 @@ const LuckyWheel = () => {
           className="absolute top-4 left-4 bg-[#CD1928] p-2 rounded-full shadow-md z-50 outline-none ring-0 focus:outline-none focus:ring-0"
         >
           {isAudioPlaying ? (
-            <Volume2 size={24} color="#FFFFFF" />
+            <Volume2 size={24} color="#FEF9C6]" />
           ) : (
-            <VolumeX size={24} color="#FFFFFF" />
+            <VolumeX size={24} color="#FEF9C6" />
           )}
         </button>
         <h1 className="text-4xl font-bold text-[#FEF9C6] z-10 bg-[#CD1928] p-2 rounded-lg">
