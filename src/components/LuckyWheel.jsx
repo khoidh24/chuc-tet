@@ -114,7 +114,7 @@ const LuckyWheel = () => {
         chartRef.current.options.rotation = targetRotation % 360;
         chartRef.current.update();
         setPrize(selectedPrize);
-        console.log(selectedPrize);
+        // console.log(selectedPrize);
         setSpinning(false);
         setIsModalVisible(true);
       }
