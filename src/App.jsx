@@ -10,6 +10,7 @@ Chart.register(PieController, ArcElement, Tooltip, Legend, ChartDataLabels);
 const LuckyWheel = () => {
   const canvasRef = useRef();
   const chartRef = useRef(null); // Lưu trữ `myChart` trong ref
+  const audioRef = useRef();
   const spinningRef = useRef(false);
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [prize, setPrize] = useState();
@@ -119,8 +120,33 @@ const LuckyWheel = () => {
     requestAnimationFrame(rotate);
   };
 
+  useEffect(() => {
+    const audio = audioRef.current;
+
+    // Phát nhạc sau khi người dùng tương tác
+    const enableAudio = () => {
+      audio.play().catch((error) => {
+        console.error(
+          "Autoplay blocked. Waiting for user interaction...",
+          error
+        );
+      });
+      document.removeEventListener("click", enableAudio); // Loại bỏ listener sau khi phát
+    };
+
+    // Gắn sự kiện click để kích hoạt phát nhạc
+    document.addEventListener("click", enableAudio);
+
+    return () => {
+      document.removeEventListener("click", enableAudio);
+    };
+  }, []);
+
   return (
     <>
+      <audio loop controls autoPlay className="hidden" ref={audioRef}>
+        <source src="/audio/bg.mp3" type="audio/mp3" />
+      </audio>
       <div className="container mx-auto w-full xl:max-w-md lg:max-w-md flex justify-center items-center h-screen flex-col overflow-hidden gap-4 bg-[#A70706] relative">
         <h1 className="text-4xl font-bold text-[#FEF9C6] z-10 bg-[#CD1928] p-2 rounded-lg">
           Lì xì quay số
