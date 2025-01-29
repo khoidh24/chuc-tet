@@ -4,6 +4,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { prizeLabels, PRIZES } from "../enums/prize";
 import PrizeModal from "./PrizeModal";
 import { Volume2, VolumeX } from "lucide-react";
+import PlayOverlay from "./PlayOverlay";
 
 // Đăng ký các thành phần cần thiết
 Chart.register(PieController, ArcElement, Tooltip, Legend, ChartDataLabels);
@@ -15,7 +16,7 @@ const LuckyWheel = () => {
   const [spinning, setSpinning] = useState(false);
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [prize, setPrize] = useState();
-  const [isAudioPlaying, setIsAudioPlaying] = useState(false);
+  const [isAudioPlaying, setIsAudioPlaying] = useState(true);
 
   const data = useMemo(() => [16, 16, 16, 16, 16, 16], []);
   const pieColors = useMemo(
@@ -147,7 +148,7 @@ const LuckyWheel = () => {
             <VolumeX size={24} color="#FEF9C6" />
           )}
         </button>
-        <h1 className="text-4xl font-bold text-[#FEF9C6] z-10 bg-[#CD1928] p-2 rounded-lg">
+        <h1 className="text-4xl font-bold text-[#FEF9C6] bg-[#CD1928] p-2 rounded-lg z-20">
           Lì xì quay số
         </h1>
         <div className="w-[80%] relative z-50">
@@ -166,7 +167,7 @@ const LuckyWheel = () => {
             QUAY!
           </button>
         </div>
-        <p className="text-white mx-4 text-center z-10">
+        <p className="text-white mx-4 text-center z-20">
           {prize
             ? prize?.result
             : spinning
@@ -177,7 +178,13 @@ const LuckyWheel = () => {
           draggable="false"
           alt="tet-tree"
           src="/tet-tree.webp"
-          className="w-full absolute top-[-50px] disable-select select-none"
+          className="w-full absolute top-[-50px] z-10 disable-select select-none"
+        />
+        <img
+          draggable="false"
+          alt="firework"
+          src="/firework.gif"
+          className="w-[200px] absolute top-10 z-[9] -right-10 disable-select select-none"
         />
         <img
           draggable="false"
@@ -185,11 +192,24 @@ const LuckyWheel = () => {
           src="/footer.gif"
           className="absolute bottom-12 disable-select select-none"
         />
-        <div className="text-xs absolute bottom-2 text-white mx-4 text-center z-10">
+        <img
+          draggable="false"
+          alt="flower"
+          src="/flower.png"
+          className="w-[240px] absolute top-32 transform -translate-x-[50%] left-0  disable-select select-none z-10 rotate-flower"
+        />
+        <img
+          draggable="false"
+          alt="flower"
+          src="/flower.png"
+          className="w-[100px] absolute bottom-48 transform translate-x-[50%] right-0  disable-select select-none z-10 rotate-flower"
+        />
+        <div className="text-xs absolute bottom-2 text-white mx-4 text-center z-20">
           <p>App này được làm bởi Hoàng Khôi (khoidh24) ✨</p>
           <p>App độc quyền không sao chép. Chúc mọi người năm mới vui vẻ 😊</p>
         </div>
 
+        <PlayOverlay open audioRef={audioRef} />
         <PrizeModal
           isVisible={isModalVisible}
           onClose={() => {
