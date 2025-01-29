@@ -169,7 +169,7 @@ const LuckyWheel = () => {
             : "Ấn vào nút quay để nhận lì xì nhé!"}
         </p>
         <img src="/tet-tree.webp" className="w-full absolute top-[-50px]" />
-        <img src="/footer2.gif" className="absolute bottom-12" />
+        <img src="/footer.gif" className="absolute bottom-12" />
         <div className="text-xs absolute bottom-2 text-white mx-4 text-center z-10">
           <p>App này được làm bởi Khôi Dương (khoidh24) ✨</p>
           <p>App độc quyền không sao chép. Chúc mọi người năm mới vui vẻ 😊</p>

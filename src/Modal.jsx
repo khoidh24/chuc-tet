@@ -6,19 +6,20 @@ const Modal = ({ isVisible = false, onClose, prize, description }) => {
     <AnimatePresence>
       {isVisible && (
         <motion.div
-          className="absolute inset-0 bg-black/50 flex justify-center items-center z-50"
+          className="fixed top-0 left-0 w-full h-full flex justify-center items-center z-50"
+          style={{ backgroundColor: "rgba(0, 0, 0, 0.5)" }}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
         >
           <motion.div
-            className="flex flex-col w-full max-w-md mx-4"
+            className="flex flex-col w-full max-w-md px-4"
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             exit={{ scale: 0 }}
             transition={{ duration: 0.3, ease: "easeOut" }}
           >
-            <div className="bg-[#A70706] rounded-2xl shadow-lg p-6 w-full text-center">
+            <div className="bg-red-800 rounded-2xl shadow-lg p-6 text-center">
               <h2 className="text-2xl font-bold text-[#FEF9C6] mb-6">
                 {prize}
               </h2>
