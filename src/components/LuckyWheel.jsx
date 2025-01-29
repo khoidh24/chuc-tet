@@ -92,14 +92,14 @@ const LuckyWheel = () => {
       Math.random() * (selectedPrize.maxDeg - selectedPrize.minDeg + 1) +
         selectedPrize.minDeg
     );
-    const fullRotations = 40 * 360; // Số vòng quay hoàn chỉnh
+    const fullRotations = Number(import.meta.env.VITE_APP_ROUNDS) * 360; // Số vòng quay hoàn chỉnh
     const targetRotation = fullRotations + randomDeg;
 
     let currentRotation = 0;
 
     const easeOut = (t, b, c, d) => -c * (t /= d) * (t - 2) + b;
 
-    const duration = 3000; // Tổng thời gian quay (ms)
+    const duration = Number(import.meta.env.VITE_APP_DURATION); // Tổng thời gian quay (ms)
     const startTime = performance.now();
 
     const rotate = (timestamp) => {
