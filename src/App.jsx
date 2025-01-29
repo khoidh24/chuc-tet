@@ -3,6 +3,7 @@ import ChartDataLabels from "chartjs-plugin-datalabels";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { prizeLabels, PRIZES } from "./enums/prize";
 import Modal from "./Modal";
+import { Volume2, VolumeX } from "lucide-react";
 
 // Đăng ký các thành phần cần thiết
 Chart.register(PieController, ArcElement, Tooltip, Legend, ChartDataLabels);
@@ -14,6 +15,7 @@ const LuckyWheel = () => {
   const spinningRef = useRef(false);
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [prize, setPrize] = useState();
+  const [isAudioPlaying, setIsAudioPlaying] = useState(false);
 
   const data = useMemo(() => [16, 16, 16, 16, 16, 16], []);
   const pieColors = useMemo(
@@ -120,56 +122,53 @@ const LuckyWheel = () => {
     requestAnimationFrame(rotate);
   };
 
-  useEffect(() => {
-    const audio = audioRef.current;
-
-    // Phát nhạc sau khi người dùng tương tác
-    const enableAudio = () => {
-      audio.play().catch((error) => {
-        console.error(
-          "Autoplay blocked. Waiting for user interaction...",
-          error
-        );
-      });
-      document.removeEventListener("click", enableAudio); // Loại bỏ listener sau khi phát
-    };
-
-    // Gắn sự kiện click để kích hoạt phát nhạc
-    document.addEventListener("click", enableAudio);
-
-    return () => {
-      document.removeEventListener("click", enableAudio);
-    };
-  }, []);
+  const toggleAudio = () => {
+    if (isAudioPlaying) {
+      audioRef.current.pause();
+    } else {
+      audioRef.current.play();
+    }
+    setIsAudioPlaying(!isAudioPlaying);
+  };
 
   return (
     <>
-      <audio loop controls autoPlay className="hidden" ref={audioRef}>
+      <audio loop ref={audioRef} autoPlay>
         <source src="/audio/bg.mp3" type="audio/mp3" />
       </audio>
       <div className="container mx-auto w-full xl:max-w-md lg:max-w-md flex justify-center items-center h-screen flex-col overflow-hidden gap-4 bg-[#A70706] relative">
+        <button
+          onClick={toggleAudio}
+          className="absolute top-4 left-4 bg-[#CD1928] p-2 rounded-full shadow-md z-50"
+        >
+          {isAudioPlaying ? (
+            <Volume2 size={24} color="#FFFFFF" />
+          ) : (
+            <VolumeX size={24} color="#FFFFFF" />
+          )}
+        </button>
         <h1 className="text-4xl font-bold text-[#FEF9C6] z-10 bg-[#CD1928] p-2 rounded-lg">
           Lì xì quay số
         </h1>
-        <div className="w-[80%] relative">
+        <div className="w-[80%] relative z-50">
           <img src="/ring.gif" className="absolute inset-0 rotate-90" />
           <canvas ref={canvasRef}></canvas>
           <button
             onClick={handleSpin}
             disabled={spinningRef.current}
-            className="bg-[#CD1928] outline:none ring-0 focus:outline-none focus:ring-0 w-[86px] h-[86px] z-20 rounded-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-bold border-2 border-white text-xl"
+            className="bg-[#CD1928] outline:none ring-0 focus:outline-none focus:ring-0 w-[86px] h-[86px] z-[60] rounded-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-bold border-2 border-white text-xl"
           >
             QUAY!
           </button>
         </div>
-        <p className="text-white mx-4 text-center">
+        <p className="text-white mx-4 text-center z-10">
           {spinningRef.current
             ? "Để xem chúng ta sẽ trúng gì nào..."
             : "Ấn vào nút quay chính giữa vòng quay để nhận lì xì nhé!"}
         </p>
         <img src="/tet-tree.webp" className="w-full absolute top-[-50px]" />
         <img src="/footer2.gif" className="absolute bottom-12" />
-        <p className="text-xs absolute bottom-2 text-white mx-4 text-center">
+        <p className="text-xs absolute bottom-2 text-white mx-4 text-center z-10">
           App này được làm bởi Khôi Dương (khoidh24) ✨
         </p>
         <Modal
