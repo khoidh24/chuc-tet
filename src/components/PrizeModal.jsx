@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { motion, AnimatePresence } from "framer-motion";
 
-const Modal = ({ isVisible = false, onClose, prize, description }) => {
+const PrizeModal = ({ isVisible = false, onClose, prize, description }) => {
   return (
     <AnimatePresence>
       {isVisible && (
@@ -42,4 +42,4 @@ const Modal = ({ isVisible = false, onClose, prize, description }) => {
   );
 };
 
-export default Modal;
+export default PrizeModal;
