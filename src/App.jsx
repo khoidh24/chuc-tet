@@ -24,6 +24,18 @@ const App = () => {
     };
   }, []);
 
+  useEffect(() => {
+    const preventSwipe = (event) => {
+      event.preventDefault();
+    };
+
+    document.addEventListener("touchmove", preventSwipe, { passive: false });
+
+    return () => {
+      document.removeEventListener("touchmove", preventSwipe);
+    };
+  }, []);
+
   return (
     <>
       <LuckyWheel />
