@@ -6,7 +6,7 @@ const Modal = ({ isVisible = false, onClose, prize, description }) => {
     <AnimatePresence>
       {isVisible && (
         <motion.div
-          className="fixed top-0 left-0 w-full h-full flex justify-center items-center z-50"
+          className="absolute inset-0 w-full h-full max-w-md flex justify-center items-center z-50"
           style={{ backgroundColor: "rgba(0, 0, 0, 0.5)" }}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
