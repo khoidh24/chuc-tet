@@ -53,13 +53,16 @@ const LuckyWheel = () => {
             anchor: "center",
             align: "end",
             clamp: true,
-            color: "#000",
-            formatter: (_, context) =>
-              context.chart.data.labels[context.dataIndex],
+            formatter: (_, context) => {
+              const label = context.chart.data.labels[context.dataIndex];
+              return label;
+            },
             font: {
               size: 24,
               weight: "bold",
             },
+            color: (context) =>
+              context.dataIndex % 2 === 0 ? "#FEF9C6" : "#CD1928",
           },
         },
       },
@@ -138,7 +141,7 @@ const LuckyWheel = () => {
       <audio ref={audioRef} autoPlay loop>
         <source src="/audio/bg.mp3" type="audio/mp3" />
       </audio>
-      <div className="container mx-auto w-full xl:max-w-md lg:max-w-md flex justify-center items-center h-screen flex-col overflow-hidden gap-4 bg-[#A70706] relative">
+      <div className="container mx-auto w-full xl:max-w-md lg:max-w-md flex justify-center items-center h-dvh flex-col overflow-hidden gap-4 bg-[#A70706] relative">
         <button
           onClick={toggleAudio}
           className="absolute top-4 left-4 bg-[#CD1928] p-2 rounded-full shadow-md z-50 outline-none ring-0 focus:outline-none focus:ring-0"
