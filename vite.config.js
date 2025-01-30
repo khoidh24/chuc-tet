@@ -7,6 +7,8 @@ export default defineConfig({
   plugins: [react(), tailwindcss()],
   build: {
     minify: "esbuild",
+    cssMinify: "esbuild",
+    cssCodeSplit: true,
     terserOptions: {
       compress: {
         drop_console: true,
