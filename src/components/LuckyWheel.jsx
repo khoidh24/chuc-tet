@@ -1,16 +1,16 @@
 import { ArcElement, Chart, Legend, PieController, Tooltip } from "chart.js";
 import ChartDataLabels from "chartjs-plugin-datalabels";
+import { Volume2, VolumeX } from "lucide-react";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { prizeLabels, PRIZES } from "../enums/prize";
-import PrizeModal from "./PrizeModal";
-import { Volume2, VolumeX } from "lucide-react";
 import PlayOverlay from "./PlayOverlay";
+import PrizeModal from "./PrizeModal";
 
 // Đăng ký các thành phần cần thiết
 Chart.register(PieController, ArcElement, Tooltip, Legend, ChartDataLabels);
 
 const LuckyWheel = () => {
-  const canvasRef = useRef();
+  const canvasRef = useRef(null);
   const chartRef = useRef(null); // Lưu trữ `myChart` trong ref
   const audioRef = useRef();
   const [spinning, setSpinning] = useState(false);
