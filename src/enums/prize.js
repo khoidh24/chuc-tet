@@ -6,70 +6,80 @@ const twentyK = Number(import.meta.env.VITE_APP_20K);
 const fiftyK = Number(import.meta.env.VITE_APP_50K);
 const oneHundredK = Number(import.meta.env.VITE_APP_100K);
 const twoHundredK = Number(import.meta.env.VITE_APP_200K);
+const fiveK = Number(import.meta.env.VITE_APP_5K);
+const fiveHundredK = Number(import.meta.env.VITE_APP_500K);
 
 const PRIZES = [
   {
     minDeg: 0,
-    maxDeg: 30,
-    value: 2,
-    percent: betterLuckNextTime,
-    result: "Ôi tiếc quá, bạn không trúng thưởng 🥲",
+    maxDeg: 45,
+    value: 1,
+    percent: fiveK,
+    result: "Waoooo! Bạn đã trúng 5.000vnđ 🎉",
     description:
-      "Không sao cả, năm sau có khi bạn sẽ là người đầu tiên giật giải lớn nhất đó 😍",
+      "Một khởi đầu may mắn! Năm nay chắc chắn sẽ có nhiều điều bất ngờ 🥳",
   },
   {
-    minDeg: 31,
+    minDeg: 46,
     maxDeg: 90,
-    value: 1,
+    value: 2,
+    percent: fiveHundredK,
+    result: "Waoooo! Bạn đã trúng 500.000vnđ 🎉",
+    description: "Chúc mừng! Một bước đột phá! Đây là năm của bạn rồi 🌟",
+  },
+  {
+    minDeg: 91,
+    maxDeg: 135,
+    value: 3,
     percent: tenK,
     result: "Waoooo! Bạn đã trúng 10.000vnđ 🎉",
     description:
       "Tuy là quà nhỏ nhất nhưng nó mang ý nghĩa tấm lòng nhiều nhất ❤️",
   },
   {
-    minDeg: 91,
-    maxDeg: 150,
-    value: 6,
-    percent: twentyK,
-    result: "Waoooo! Bạn đã trúng 20.000vnđ 🎉",
-    description:
-      "Có vẻ như hôm nay là ngày may mắn của bạn, chắc hẳn cả năm cũng sẽ may mắn như vậy rồi 😊",
-  },
-  {
-    minDeg: 151,
-    maxDeg: 210,
-    value: 5,
-    percent: fiftyK,
-    result: "Waoooo! Bạn đã trúng 50.000vnđ 🎉",
-    description: "Bạn rất chi là may mắn luôn! Cả năm phát tài rồi đó 🤩",
-  },
-  {
-    minDeg: 211,
-    maxDeg: 270,
+    minDeg: 136,
+    maxDeg: 180,
     value: 4,
     percent: oneHundredK,
     result: "Waoooo! Bạn đã trúng 100.000vnđ 🎉",
     description: "Không thể tin được! Số bạn năm nay chắc hẳn rất tốt 🥰",
   },
   {
-    minDeg: 271,
-    maxDeg: 330,
-    value: 3,
+    minDeg: 181,
+    maxDeg: 225,
+    value: 5,
+    percent: twentyK,
+    result: "Waoooo! Bạn đã trúng 20.000vnđ 🎉",
+    description:
+      "Có vẻ như hôm nay là ngày may mắn của bạn, chắc hẳn cả năm cũng sẽ may mắn như vậy rồi 😊",
+  },
+  {
+    minDeg: 226,
+    maxDeg: 270,
+    value: 6,
     percent: twoHundredK,
     result: "Waoooo! Bạn đã trúng 200.000vnđ 🎉",
     description: "Không còn gì để nói! Năm nay chắc chắn là dành cho bạn ✨",
   },
   {
-    minDeg: 331,
-    maxDeg: 360,
-    value: 2,
+    minDeg: 271,
+    maxDeg: 315,
+    value: 7,
     percent: betterLuckNextTime,
     result: "Ôi tiếc quá, bạn không trúng thưởng 🥲",
     description:
       "Không sao cả, năm sau có khi bạn sẽ là người đầu tiên giật giải lớn nhất đó 😍",
   },
+  {
+    minDeg: 316,
+    maxDeg: 360,
+    value: 8,
+    percent: fiftyK,
+    result: "Waoooo! Bạn đã trúng 50.000vnđ 🎉",
+    description: "Bạn rất chi là may mắn luôn! Cả năm phát tài rồi đó 🤩",
+  },
 ];
 
-const prizeLabels = ["10K", "Hụt", "200K", "100K", "50K", "20K"];
+const prizeLabels = ["500K", "5K", "50K", "Hụt", "200K", "20K", "100K", "10K"];
 
 export { PRIZES, prizeLabels };

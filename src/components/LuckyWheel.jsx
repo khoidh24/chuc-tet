@@ -20,9 +20,18 @@ const LuckyWheel = () => {
   const spinDuration = Number(import.meta.env.VITE_APP_DURATION);
   const spinRounds = Number(import.meta.env.VITE_APP_ROUNDS);
 
-  const data = useMemo(() => [16, 16, 16, 16, 16, 16], []);
+  const data = useMemo(() => [16, 16, 16, 16, 16, 16, 16, 16], []);
   const pieColors = useMemo(
-    () => ["#CD1928", "#FEF9C6", "#CD1928", "#FEF9C6", "#CD1928", "#FEF9C6"],
+    () => [
+      "#CD1928",
+      "#FEF9C6",
+      "#CD1928",
+      "#FEF9C6",
+      "#CD1928",
+      "#FEF9C6",
+      "#CD1928",
+      "#FEF9C6",
+    ],
     []
   );
 
@@ -49,7 +58,7 @@ const LuckyWheel = () => {
             display: false,
           },
           datalabels: {
-            offset: -20,
+            offset: -10,
             anchor: "center",
             align: "end",
             clamp: true,
