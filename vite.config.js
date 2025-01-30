@@ -9,6 +9,7 @@ export default defineConfig({
     minify: "esbuild",
     cssMinify: "esbuild",
     cssCodeSplit: true,
+    sourcemap: false,
     terserOptions: {
       compress: {
         drop_console: true,
