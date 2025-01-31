@@ -49,6 +49,7 @@ const LuckyWheel = () => {
         ],
       },
       options: {
+        rotation: 337.5,
         hover: { mode: null },
         responsive: true,
         animation: { duration: 0 },
@@ -170,7 +171,7 @@ const LuckyWheel = () => {
             draggable="false"
             alt="spinning-wheel-ring"
             src="/ring.gif"
-            className="absolute inset-0 rotate-90 select-none"
+            className="absolute inset-0 select-none rotate-90"
           />
           <canvas ref={canvasRef}></canvas>
           <button
