@@ -19,12 +19,6 @@ const PlayOverlay = ({ audioRef }) => {
         }}
         onClick={handleCloseOverlay}
       >
-        <img
-          draggable="false"
-          src="/lanterns-overlay.gif"
-          alt="lanterns-overlay"
-          className="absolute top-0 opacity-70 disable-select select-none"
-        />
         <p>Chạm vào màn hình để tiếp tục</p>
       </div>
     )

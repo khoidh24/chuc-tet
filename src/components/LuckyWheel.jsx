@@ -23,13 +23,13 @@ const LuckyWheel = () => {
   const data = useMemo(() => [16, 16, 16, 16, 16, 16, 16, 16], []);
   const pieColors = useMemo(
     () => [
-      "#CD1928",
+      "#C71320",
       "#FEF9C6",
-      "#CD1928",
+      "#C71320",
       "#FEF9C6",
-      "#CD1928",
+      "#C71320",
       "#FEF9C6",
-      "#CD1928",
+      "#C71320",
       "#FEF9C6",
     ],
     []
@@ -72,7 +72,7 @@ const LuckyWheel = () => {
               weight: "bold",
             },
             color: (context) =>
-              context.dataIndex % 2 === 0 ? "#FEF9C6" : "#CD1928",
+              context.dataIndex % 2 === 0 ? "#FEF9C6" : "#C71320",
           },
         },
       },
@@ -151,10 +151,10 @@ const LuckyWheel = () => {
       <audio ref={audioRef} autoPlay loop>
         <source src="/audio/bg.mp3" type="audio/mp3" />
       </audio>
-      <div className="container mx-auto w-full xl:max-w-md lg:max-w-md flex justify-center items-center h-dvh flex-col overflow-hidden gap-4 bg-[#A70706] relative">
+      <div className="container mx-auto w-full xl:max-w-md lg:max-w-md flex justify-center items-center h-dvh flex-col overflow-hidden gap-4 bg-[#9E0B0F] relative">
         <button
           onClick={toggleAudio}
-          className="absolute top-4 left-4 bg-[#CD1928] p-2 rounded-full shadow-md z-50 outline-none ring-0 focus:outline-none focus:ring-0"
+          className="absolute top-4 left-4 bg-[#C71320] p-2 rounded-full shadow-md z-50 outline-none ring-0 focus:outline-none focus:ring-0"
         >
           {isAudioPlaying ? (
             <Volume2 size={24} color="#FEF9C6" />
@@ -162,7 +162,7 @@ const LuckyWheel = () => {
             <VolumeX size={24} color="#FEF9C6" />
           )}
         </button>
-        <h1 className="text-4xl font-bold text-[#FEF9C6] bg-[#CD1928] p-2 rounded-lg z-20">
+        <h1 className="text-4xl font-bold text-[#FEF9C6] bg-[#C71320] p-2 rounded-lg z-20">
           Lì xì quay số
         </h1>
         <div className="w-[80%] relative z-50">

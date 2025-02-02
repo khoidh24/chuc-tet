@@ -13,7 +13,6 @@ const App = () => {
       "/firework.gif",
       "/footer.gif",
       "/flower.png",
-      "lanterns-overlay.gif",
       "/audio/bg.mp3",
     ];
 
