@@ -1,5 +1,6 @@
-import { useEffect } from "react";
-import LuckyWheel from "./components/LuckyWheel";
+import { lazy, Suspense, useEffect } from "react";
+import LoadingScreen from "./components/LoadingScreen";
+const LuckyWheel = lazy(() => import("./components/LuckyWheel"));
 
 const App = () => {
   useEffect(() => {
@@ -25,9 +26,9 @@ const App = () => {
   }, []);
 
   return (
-    <>
+    <Suspense fallback={<LoadingScreen />}>
       <LuckyWheel />
-    </>
+    </Suspense>
   );
 };
 
