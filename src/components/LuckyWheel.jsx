@@ -204,7 +204,7 @@ const LuckyWheel = () => {
         <img
           draggable="false"
           alt="footer"
-          src="/footer.gif"
+          src="/footer2.gif"
           className="absolute bottom-12 select-none"
         />
         <img
