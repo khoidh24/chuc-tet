@@ -151,7 +151,7 @@ const LuckyWheel = () => {
       <audio ref={audioRef} autoPlay loop>
         <source src="/audio/bg.mp3" type="audio/mp3" />
       </audio>
-      <div className="container mx-auto w-full xl:max-w-md lg:max-w-md flex justify-center items-center h-dvh flex-col overflow-hidden gap-4 bg-[#9E0B0F] relative">
+      <div className="container mx-auto w-full xl:max-w-md lg:max-w-md flex justify-center items-center h-dvh flex-col overflow-hidden gap-4 bg-[#A80908] relative">
         <button
           onClick={toggleAudio}
           className="absolute top-4 left-4 bg-[#C71320] p-2 rounded-full shadow-md z-50 outline-none ring-0 focus:outline-none focus:ring-0"
