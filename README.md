@@ -1,8 +1,27 @@
-# React + Vite
+# VÒNG QUAY MAY MẮN - CHÚC TẾT
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p align="center">
+  <img src="./example.png" alt="Example">
+</p>
 
-Currently, two official plugins are available:
+Tôi muốn troll tất cả mấy đứa nhóc trong họ hàng hoặc là bạn bè tôi với 1 cái vòng quay may mắn - trúng ô nào lì xì ô đó
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
+
+## Tại sao tôi lại làm cái này? 
+
+Năm 2025, vào lúc đêm giao thừa, tôi đã nghĩ ra cái ý tưởng này chỉ để troll mọi người vì bạn bè dev xung quanh tôi thường hay nói vui là:
+
+> Ước gì làm cái vòng quay cho mấy đứa nhỏ, trúng nhiêu lì xì bấy nhiêu, nhưng mà phải trúng số nhỏ nhỏ hoặc tỉ lệ hụt nhiều lên
+
+Nhằm thỏa mãn "Satan" trong lòng tôi và các thằng đồng nghiệp dev của tôi, tôi đã viết ra cái app này để mọi người có thể vào phá phách, chọc cười bạn bè hay lũ nhỏ trong gia đình vì tỉ lệ hụt siêu cao, và tỉ lệ trúng tiền mệnh giá cao nó còn nhỏ nhoi hơn cơ hội tôi trúng tuyển vào FAANG (quá buồn vì tôi quá gà) 🐔
+
+---
+
+Mọi người có thể vào cái website có đính sẵn ở trên cái repository này hoặc **[click vào đây](https://chuc-tet.vercel.app)** để có cơ hội chơi cái này. Nó đủ vui để có thể câu dẫn con nít chơi cả ngày à nha 🦉
+
+---
+
+## Tái bút:
+
+cái file `README.md` này tôi chỉnh sửa vào ngày 21/01/2026, nên là nếu bạn nghĩ năm nay tôi bỏ xóa cái repo này thì...**NẰM MƠ ĐI!** 🦥
