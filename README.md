@@ -28,13 +28,15 @@ Mọi người có thể vào cái website có đính sẵn ở trên cái repos
 
 cái file `README.md` này tôi chỉnh sửa vào ngày 21/01/2026, nên là nếu bạn nghĩ năm nay tôi bỏ xóa cái repo này thì...**NẰM MƠ ĐI!** 🦥
 
+<br>
+<br>
+
 ---
 
-# LUCKY WHEEL - HAPPY LUNAR NEW YEAR!
+<br>
+<br>
 
-<p align="center">
-  <img src="./example.png" alt="Example">
-</p>
+# LUCKY WHEEL - HAPPY LUNAR NEW YEAR!
 
 I wanna bamboozle whole kids from my family or my friends with this one - the lucky wheel - what they see what they get.
 
