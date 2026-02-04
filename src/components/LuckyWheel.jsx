@@ -219,9 +219,8 @@ const LuckyWheel = () => {
           src="/flower.png"
           className="w-[100px] absolute bottom-48 transform translate-x-[50%] right-0  select-none z-10 rotate-flower"
         />
-        <div className="text-xs absolute bottom-2 text-white mx-4 text-center z-20">
-          <p>App này được làm bởi Hoàng Khôi (khoidh24) ✨</p>
-          <p>App độc quyền không sao chép. Chúc mọi người năm mới vui vẻ 😊</p>
+        <div className="text-sm absolute bottom-4 text-white mx-4 text-center z-20">
+          <p>Chúc mọi người năm con ngựa vui vẻ 🐎</p>
         </div>
 
         <PlayOverlay open audioRef={audioRef} />
